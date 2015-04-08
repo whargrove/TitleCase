@@ -11,5 +11,10 @@ namespace TitleCase
 		static void Main(string[] args)
 		{
 		}
+
+		public static string ConvertToTitleCase(string s)
+		{
+			return s;
+		}
 	}
 }
