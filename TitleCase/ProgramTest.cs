@@ -6,10 +6,11 @@ namespace TitleCase
 	class ProgramTest
 	{
 		[Test]
-		public void ConvertToTitleCase_ShouldReturnEmptyString()
+		[TestCase("")]
+		[TestCase(null)]
+		public void ConvertToTitleCase_ShouldReturnEmptyString(string s)
 		{
-			// Given an empty string
-			var s = string.Empty;
+			// Given an empty string (see TestCases)
 			var expected = string.Empty;
 			// When ConvertToTitleCase is called
 			var actual = Program.ConvertToTitleCase(s);
@@ -18,10 +19,10 @@ namespace TitleCase
 		}
 
 		[Test]
-		public void ConvertToTitleCase_ShoudlReturnTitleCasedString()
+		[TestCase("a MesSEd uP stRiNG")]
+		public void ConvertToTitleCase_ShoudlReturnTitleCasedString(string s)
 		{
-			// Given a string
-			var s = "a MesSEd uP stRiNG";
+			// Given a string (see TestCases)
 			var expected = "A Messed Up String";
 			// When ConvertToTitleCase is called
 			var actual = Program.ConvertToTitleCase(s);
