@@ -14,6 +14,9 @@ namespace TitleCase
 
 		public static string ConvertToTitleCase(string s)
 		{
+			if (string.IsNullOrEmpty(s))
+				return string.Empty;
+
 			return s;
 		}
 	}
